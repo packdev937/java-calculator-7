@@ -43,10 +43,10 @@ public class Delimiters {
     }
 
     private static String parseCustomDelimiter(String input) {
-        if (input.startsWith("//") && input.contains("\n")) {
-            return input.substring(2, input.indexOf("\n"));
+        if (input.startsWith(CUSTOM_DELIMITER_PREFIX.getValue()) && input.contains(CUSTOM_DELIMITER_SUFFIX.getValue())) {
+            return input.substring(2, input.indexOf(CUSTOM_DELIMITER_SUFFIX.getValue()));
         }
-        return "";
+        return EMPTY.getValue();
     }
 
     public Numbers extractNumbers(String input) {
@@ -62,7 +62,7 @@ public class Delimiters {
         StringBuilder regex = new StringBuilder();
         for (Delimiter delimiter : delimiters) {
             regex.append(delimiter.getDelimiter());
-            regex.append("|");
+            regex.append(PIPE.getValue());
         }
         regex.deleteCharAt(regex.length() - 1);
         return regex.toString();

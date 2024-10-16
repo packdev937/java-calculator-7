@@ -32,9 +32,4 @@ public class Numbers {
             .map(Number::getNumber)
             .reduce(BigInteger.ZERO, BigInteger::add);
     }
-
-    @Override
-    public String toString() {
-        return numbers.toString();
-    }
 }

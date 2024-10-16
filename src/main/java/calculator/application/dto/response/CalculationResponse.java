@@ -14,7 +14,7 @@ public record CalculationResponse(BigInteger result) implements Response {
 
     @Override
     public String toString() {
-        return "계산 결과: " + result;
+        return "결과 : " + result;
     }
 
 }

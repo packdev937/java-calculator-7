@@ -31,7 +31,7 @@ public class Delimiter {
             return false;
         }
         Delimiter delimiter = (Delimiter) o;
-        return this.delimiter.equals(delimiter.delimiter);  // equals 비교 수정
+        return this.delimiter.equals(delimiter.delimiter);
     }
 
     @Override

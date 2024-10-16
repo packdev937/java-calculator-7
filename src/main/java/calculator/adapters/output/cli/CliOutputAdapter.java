@@ -13,11 +13,6 @@ public class CliOutputAdapter implements OutputPort {
 
     @Override
     public void writeResponse(Response response) {
-        if (response instanceof CalculationResponse) {
-            CalculationResponse calculationResponse = (CalculationResponse) response;
-            System.out.println("계산 결과: " + calculationResponse.result());
-        } else {
-            System.out.println(response.toString());
-        }
+        System.out.println(response.toString());
     }
 }

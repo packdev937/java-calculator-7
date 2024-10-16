@@ -1,6 +1,7 @@
 package calculator.domain.vo.number.constants;
 
 public enum NumberRange {
+    ZERO(0),
     MIN_VALID_NUMBER(1),
     MAX_VALID_NUMBER(1000);
 
