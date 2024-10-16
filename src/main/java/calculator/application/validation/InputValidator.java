@@ -2,9 +2,13 @@ package calculator.application.validation;
 
 import static calculator.infrastructure.exception.ErrorCode.*;
 
+import calculator.application.dto.request.CalculationRequest;
+
 public class InputValidator {
 
-    public void validate(String target) {
+    public void validate(final CalculationRequest calculationRequest) {
+        String target = calculationRequest.input();
+
         isEmpty(target);
         isNotTrimmed(target);
         isNotEndedWithNumber(target);

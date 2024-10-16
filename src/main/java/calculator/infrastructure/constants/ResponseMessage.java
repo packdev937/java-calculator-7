@@ -13,3 +13,8 @@ public enum ResponseMessage {
         return message;
     }
 }
+
+/**
+ * 애플리케이션 전반적인 동작과 관련된 상수들은 Infrastructure 계층에 위치한다.
+ * 출력 문구, 입력 문구 등이 해당한다.
+ */
